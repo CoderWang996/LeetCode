@@ -65,7 +65,7 @@ public class Solution20 {
                 if (stack.peek()==map.get(c)){
                     stack.pop();
                 }else {
-                    return false;
+                    return false; 
                 }
             }
         }
