@@ -1,8 +1,5 @@
 package Solution7;
 
-
-import java.util.Stack;
-
 /*
 * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 
@@ -42,7 +39,9 @@ public class Solution7 {
         for (int i = 0; i < s.length(); i++) {
             sb.append(s.charAt(i));
         }
+        //调用SB翻转方法
         sb = sb.reverse();
+        //如果转换时发生异常则说明翻转后数字超出32位，此时返回0
         try {
             Integer integer = Integer.valueOf(sb.toString());
             return integer;
