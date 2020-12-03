@@ -21,14 +21,15 @@ package Solution204;
 * */
 public class Solution204 {
     public static int countPrimes(int n) {
-        if (n == 10000)
+/*        if (n == 10000)
             return 1229;
         if (n == 499979)
             return 41537;
         if (n == 999983)
             return 78497;
         if (n == 1500000)
-            return 114155;
+            return 114155;*/
+
         if (n>0){
             int count=0;
             for (int i = 2; i < n; i++) {
@@ -42,17 +43,14 @@ public class Solution204 {
     }
 
     public static boolean isPrime(int n){
-        for(int i=2;i<n;i++){
+        for(int i=2;i*i<=n;i++){
             if(n%i==0){
                 return false;
             }
         }
-        if(n==2){
-            return true;
-        }
         return true;
     }
     public static void main(String[] args) {
-        System.out.println(countPrimes(499979));
+        System.out.println(countPrimes(1500000));
     }
 }
